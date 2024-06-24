@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
@@ -44,16 +50,16 @@ nav a:hover {
 
 
 :root {
-    --primary-color: #000000;
-    --secondary-color: #808080;
-    --accent1-color: #A2999E;
-    --accent2-color: #0000ff;
+    --primary-color: #423E37;
+    --secondary-color: #EDEBD7;
+    --accent1-color: #E3B23C;
+    --accent2-color: #EDEBD7;
 
-    --heading-font: '_______', serif;
-    --paragraph-font: '_______', serif;
+    --heading-font: 'Lato', 'Roboto', 'Nunito Sans', sans-serif;
+    --paragraph-font: 'Open Sans', 'Arial', sans-serif;
 
     --nav-background-color: #C6C7C4;
     --nav-link-color: #000000;
     --nav-hover-link-color: #EEFOF2;
-    --nav-hover-background-color: #846A6A;
+    --nav-hover-background-color: #E3B23C;
 }
