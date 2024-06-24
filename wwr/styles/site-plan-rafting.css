@@ -3,7 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
