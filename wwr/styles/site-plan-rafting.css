@@ -3,26 +3,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
+
+/* CSS Variables */
+:root {
+    --primary-color: #423E37;
+    --secondary-color: #EDEBD7;
+    --accent1-color: #E3B23C;
+    --accent2-color: #EDEBD7;
+
+    --heading-font: 'Lato', 'Roboto', 'Nunito Sans', sans-serif;
+    --paragraph-font: 'Open Sans', 'Arial', sans-serif;
+
+    --nav-background-color: #C6C7C4;
+    --nav-link-color: #000000;
+    --nav-hover-link-color: #EEFOF2;
+    --nav-hover-background-color: #E3B23C;
+}
+
+/* Body Styles */
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
     padding: 20px;
 }
 
+/* Header Styles */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color);
 }
 
+/* Header Section */
 header {
     padding: 20px;
     background-color: var(--accent1-color);
 }
 
+/* Paragraph Styles */
 p {
     padding: 25px;
 }
 
+/* Navigation Styles */
 nav {
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
@@ -44,19 +66,4 @@ nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
     color:
-}
-
-:root {
-    --primary-color: #423E37;
-    --secondary-color: #EDEBD7;
-    --accent1-color: #E3B23C;
-    --accent2-color: #EDEBD7;
-
-    --heading-font: 'Lato', 'Roboto', 'Nunito Sans', sans-serif;
-    --paragraph-font: 'Open Sans', 'Arial', sans-serif;
-
-    --nav-background-color: #C6C7C4;
-    --nav-link-color: #000000;
-    --nav-hover-link-color: #EEFOF2;
-    --nav-hover-background-color: #E3B23C;
 }
