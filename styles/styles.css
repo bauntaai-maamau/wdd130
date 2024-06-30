@@ -39,6 +39,7 @@ main {
 aside {
     width: 20rem;
     text-align: center;
+    position: relative;
 }
 
 aside img {
@@ -48,8 +49,8 @@ aside img {
 
 aside h2 {
     position: absolute;
-    top: 560px;
-    left: 120px;
+    top: 20px;
+    right: 95px;
     font-size: small;
 }
 
