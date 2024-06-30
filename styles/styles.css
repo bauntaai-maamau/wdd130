@@ -17,6 +17,7 @@ nav a {
 
 h1 {
     color: steelblue;
+    padding: .5rem;
 }
 
 main img {
@@ -26,6 +27,11 @@ main img {
     padding: 2px;
     box-shadow: 0 0 30px gray;
     float: right;
+    margin: 0 0 1rem 1rem;
+}
+
+main p {
+    padding: 1rem;
 }
 
 p {
@@ -49,7 +55,7 @@ aside img {
 
 aside h2 {
     position: absolute;
-    top: 20px;
+    top: 18px;
     right: 95px;
     font-size: small;
 }
@@ -67,4 +73,8 @@ footer {
     padding: 1rem;
     background-color: #eee;
     color: #333;
+}
+
+.indent {
+    padding-left: 1.5rem;
 }
