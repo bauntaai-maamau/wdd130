@@ -78,6 +78,10 @@ nav.logo {
 	text-decoration: underline;
 }
 
+.history {
+    margin-top: 2px;
+}
+
 /* Body Styles */
 body {
     font-family: var(--paragraph-font);
@@ -117,18 +121,53 @@ p {
 }
 
 /* Class Selectors */
+
 .hero {
-    display: block;
+    position: relative;
     width: 100%;
-    height: auto;
-    position: relative;
-    position: relative;
+    height: 100vh;
+    background-image: url('images/rafting.jpeg') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero h1, .hero article {
+    position: absolute;
+    color: white;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5); /* Optional: to make text more readable */
+    padding: 5px;
+    border-radius: 10px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.hero h1 {
+    top: 39%;
+    margin-bottom: 2px;
+    width: 100%;
+}
+
+.hero article {
+    top: 50%;
+    color: white;
+    width: 80%;
 }
 
 .hero img {
     width: 100%;
     height: auto;
     display: block;
+    float: right;
+    padding: 10px;
+}
+
+.hero p {
+    margin: 0;
+    color: white;
 }
 
 article img {
