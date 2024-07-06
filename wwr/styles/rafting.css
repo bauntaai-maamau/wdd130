@@ -25,10 +25,63 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--primary-color);
 }
 
+h1, h2 {
+    text-align: center;
+}
+
+header {
+	margin: 1rem auto;
+	display: flex;
+	grid-template-columns: 120px 1fr 2fr;
+	align-items: center;
+	border-bottom: 1px solid #ccc;
+	max-width: 1000px;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+nav {
+	text-align: right;
+}
+
+nav.logo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo img {
+    margin: 0 0.25rem 0 1rem;
+    width: 110px;
+    height: auto;
+}
+
+.navigation {
+	display: flex;
+	list-style: none;
+}
+
+.navigation li {
+	flex: 1 1 100%;
+}
+
+.navigation a {
+	display: block;
+	color: #E3B23C;
+	padding: 20px;
+	text-decoration: none;
+}
+
+.navigation a:hover {
+	color: #CC5500;
+	font-weight: 700;
+	text-decoration: underline;
+}
+
 /* Body Styles */
 body {
     font-family: var(--paragraph-font);
-    max-width: 960px;
+    max-width: 1000px;
     padding: 20px;
 }
 
@@ -43,9 +96,24 @@ p {
     color: var(--secondary-color);
 }
 
-/* Link Styles */
-footer a {
-    text-decoration: none;
+.adventures {
+    display: flex;
+	list-style: none;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+}
+
+.adventures figure {
+    flex: 1 1 100px; 
+    margin: 10px;
+    max-width: 30%; 
+}
+
+.adventures img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 /* Class Selectors */
@@ -57,6 +125,44 @@ footer a {
     position: relative;
 }
 
-.copyright img {
-    float: left;
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+article img {
+    width: auto;
+    max-width: 150px; 
+    height: auto;
+    display: block;
+    float: right;
+    padding-top: 30px;
+    margin-left: 20px; 
+}
+
+footer {
+    display: flex;
+    padding-top: 25px;
+    justify-content: space-between; 
+    align-items: center;
+    position: relative;
+}
+
+.sociallinks {
+    padding-left: 20px;
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+.sociallinks a {
+    margin-left: 10px; 
+    text-decoration: none;
+}
+
+.copyright {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
