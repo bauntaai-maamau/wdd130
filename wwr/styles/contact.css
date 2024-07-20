@@ -225,13 +225,14 @@ form {
     border-radius: 0.5rem;
     background-color: #eee;
     display: grid;
+    gap: 1rem; /* Added gap for better spacing */
 }
 
 fieldset {
     display: grid;
     grid-gap: .5rem;
     margin: 1rem;
-    border: 1px solid rgba (0, 0, 0, 0.2);
+    border: 1px solid rgba(0, 0, 0, 0.2); 
     padding: 1rem;
 }
 
@@ -295,5 +296,6 @@ footer {
 }
 
 .column2 {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
 }
