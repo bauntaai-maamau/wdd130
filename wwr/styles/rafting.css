@@ -1,17 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
-
 /* CSS Variables */
 :root {
     --primary-color: #A39594;
     --secondary-color: #6E675F;
     --accent1-color: #E3B23C;
     --accent2-color: #EDEBD7;
+    --background-color: #F7F7F7;
 
-    --heading-font: 'Lato', 'Roboto', 'Nunito Sans', sans-serif;
-    --paragraph-font: 'Open Sans', 'Arial', sans-serif;
+    --heading-font: 'Lato', sans-serif;
+    --paragraph-font: 'Open Sans', sans-serif;
 
     --nav-background-color: #C6C7C4;
     --nav-link-color: #000000;
@@ -19,231 +15,190 @@
     --nav-hover-background-color: #E3B23C;
 }
 
+/* General Styles */
+body {
+    font-family: var(--paragraph-font);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
+}
+
 /* Header Styles */
-h1, h2, h3, h4, h5, h6 {
-    font-family: var(--heading-font);
-    color: var(--primary-color);
-}
-
-h1, h2 {
-    text-align: center;
-}
-
 header {
-	margin: 1rem auto;
-	display: flex;
-	grid-template-columns: 120px 1fr 2fr;
-	align-items: center;
-	border-bottom: 1px solid #ccc;
-	max-width: 1000px;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-nav {
-	text-align: right;
-}
-
-nav.logo {
-    flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--nav-background-color);
+    border-bottom: 1px solid #ccc;
 }
 
 .logo img {
-    margin: 0 0.25rem 0 1rem;
-    width: 110px;
+    width: 120px;
     height: auto;
 }
 
 .navigation {
-	display: flex;
-	list-style: none;
-}
-
-.navigation li {
-	flex: 1 1 100%;
-}
-
-.navigation a {
-	display: block;
-	color: #E3B23C;
-	padding: 20px;
-	text-decoration: none;
-}
-
-.navigation a:hover {
-	color: #CC5500;
-	font-weight: 700;
-	text-decoration: underline;
-}
-
-.history {
-    margin-top: 2px;
-}
-
-/* Body Styles */
-body {
-    font-family: var(--paragraph-font);
-    max-width: 1000px;
-    padding: 20px;
-}
-
-article img {
-    float: right;
-    padding-top: 30px;
-}
-
-/* Paragraph Styles */
-p {
-    padding: 25px;
-    color: var(--secondary-color);
-}
-
-.adventures {
     display: flex;
-	list-style: none;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    list-style: none;
+    margin: 0;
     padding: 0;
 }
 
-.adventures figure {
-    flex: 1 1 100px; 
-    margin: 10px;
-    max-width: 30%; 
+.navigation li {
+    margin-left: 20px;
 }
 
-.adventures img {
-    width: 100%;
-    height: auto;
-    display: block;
+.navigation a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    transition: color 0.3s, background-color 0.3s;
+    font-size: large;
 }
 
-/* Class Selectors */
+.navigation a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+    border-radius: 5px;
+}
 
+/* Hero Section Styles */
 .hero {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: url('images/rafting.jpeg') no-repeat center center;
     background-size: cover;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
-
-.hero h1, .hero article {
-    position: absolute;
     color: white;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Optional: to make text more readable */
-    padding: 5px;
-    border-radius: 10px;
-    max-width: 1000px;
-    margin: auto;
+    padding: 20px;
 }
 
 .hero h1 {
-    top: 39%;
-    margin-bottom: 2px;
-    width: 100%;
+    font-family: var(--heading-font);
+    font-size: 48px;
+    margin: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 .hero article {
-    top: 50%;
-    color: white;
-    width: 80%;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin-top: 20px;
 }
 
-.hero img {
+/* Section Styles */
+section {
+    margin: 40px 0;
+    padding: 20px;
+    background-color: var(--accent2-color);
+    border-radius: 10px;
+}
+
+section h2 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.history p, .border p {
+    font-size: 16px;
+}
+
+/* Adventure Section */
+.adventures {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.adventures figure {
+    flex: 1 1 200px;
+    max-width: 30%;
+    text-align: center;
+}
+
+.adventures img {
     width: 100%;
     height: auto;
-    display: block;
-    float: right;
-    padding: 10px;
+    border-radius: 10px;
 }
 
-.hero p {
-    margin: 0;
-    color: white;
+.adventures figcaption {
+    margin-top: 10px;
+    font-weight: 600;
 }
 
-article img {
-    width: auto;
-    max-width: 150px; 
-    height: auto;
-    display: block;
-    float: right;
-    padding-top: 30px;
-    margin-left: 20px; 
-}
-
+/* Footer Styles */
 footer {
     display: flex;
-    padding-top: 25px;
-    justify-content: space-between; 
+    justify-content: space-between;
     align-items: center;
-    position: relative;
-}
-
-.sociallinks {
-    padding-left: 20px;
-    display: flex;
-    justify-content: flex-end;
-    
+    padding: 20px;
+    background-color: var(--nav-background-color);
+    border-top: 1px solid #ccc;
+    margin-top: 40px;
 }
 
 .sociallinks a {
-    margin-left: 10px; 
-    text-decoration: none;
+    margin-left: 10px;
+}
+
+.sociallinks img {
+    width: 35px;
+    height: auto;
 }
 
 .copyright {
-    margin: 0 auto;
     display: flex;
     align-items: center;
 }
 
-/*Embedded Map*/
-.map {
-    margin-bottom: 35px;
-    padding-bottom: 12px;
+.copyright img {
+    margin-right: 10px;
+    width: 25px;
+    height: auto;
 }
 
-/* Form Styles*/
-.contact {
-    margin-top: 30px;
-}
-
+/* Form Styles */
 form {
-    width: 650px;
+    width: 100%;
+    max-width: 650px;
     margin: 0 auto;
-    padding: 1em;
+    padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 0.5rem;
+    border-radius: 10px;
     background-color: #eee;
     display: grid;
-    gap: 1rem; /* Added gap for better spacing */
+    gap: 1rem;
 }
 
 fieldset {
     display: grid;
-    grid-gap: .5rem;
-    margin: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.2); 
+    gap: 0.5rem;
+    margin: 1rem 0;
+    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 1rem;
 }
 
 legend {
-    padding: .5rem;
+    padding: 0.5rem;
     color: navy;
-    font-size: 1.3em; 
-}
-
-label, input, button, select, textarea {
-    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3em;
 }
 
 label {
@@ -251,51 +206,30 @@ label {
     padding-right: 1rem;
 }
 
-input, select,  textarea {
+input, select, textarea {
     padding: 0.5rem;
     font-size: 1.1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
+
+button {
+    background-color: navy;
+    color: #fff;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* button:hover {
+    background-color: goldenrod;
+} */
 
 input[type="checkbox"] {
     width: 22px;
     height: 22px;
     vertical-align: bottom;
-}
-
-button {
-    margin: 0 auto;
-    background-color: navy;
-    color: #fff;
-    border: none;
-    border-radius: .5rem;
-    padding: .75rem;
-    font-size: 1.2rem;
-}
-
-button:hover {
-    background-color: goldenrod;
-}
-
-footer {
-    margin: 1rem auto 0;
-    width: 650px;
-    text-align: center;
-    font-size: 0.8em;
-    color: #777;
-    border-top: 1px solid #ccc;
-}
-
-.form-item {
-    display: grid;
-    align-items: center;
-}
-
-.column1 {
-    grid-template-columns: 3fr 1fr;
-    margin: 0.5rem 0;
-}
-
-.column2 {
-    grid-template-columns: 3fr 1fr;
-    margin: 0.5rem 0;
 }
