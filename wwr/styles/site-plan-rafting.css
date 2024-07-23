@@ -7,7 +7,7 @@
 /* CSS Variables */
 :root {
     --primary-color: #423E37;
-    --secondary-color: #EDEBD7;
+    --secondary-color: #6E675F;
     --accent1-color: #E3B23C;
     --accent2-color: #EDEBD7;
 
@@ -24,7 +24,14 @@
 body {
     font-family: var(--paragraph-font);
     max-width: 960px;
+    min-width: 670px;
+    font-family: var(--paragraph-font);
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: var(--background-color);
+    color: var(--secondary-color);
+    line-height: 1.6;
 }
 
 /* Header Styles */
@@ -215,3 +222,23 @@ footer {
     width: 25px;
     height: auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
